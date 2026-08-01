@@ -6,8 +6,21 @@ on:
 
 jobs:
   test:
+    # GCC and Clang disagree about what is worth warning about, and the union of
+    # the two catches more than either alone.
+    strategy:
+      fail-fast: false
+      matrix:
+        cc: [gcc, clang]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: make test
-        run: make test
+      - name: make test (${{ matrix.cc }})
+        run: make test CC=${{ matrix.cc }}
+
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: gcc -fanalyzer
+        run: make analyze

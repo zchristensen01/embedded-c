@@ -1,0 +1,15 @@
+# Kernel-ish C style. Optional: install with `sudo apt install clang-format`,
+# then `clang-format -i ring_buffer/*.c ring_buffer/*.h`.
+BasedOnStyle: LLVM
+Language: Cpp
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 80
+BreakBeforeBraces: Linux
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+PointerAlignment: Right
+AlignConsecutiveDeclarations: Consecutive
+SortIncludes: false
