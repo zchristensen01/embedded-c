@@ -202,6 +202,23 @@ Four things to copy from this shape:
 
 ## 4. Your first session, end to end
 
+### Day zero, ten minutes, at your desk now
+
+Prove the toolchain works before you need it to:
+
+```bash
+make test MODULE=template
+```
+
+That builds a trivial three-file module under `-Werror` and both sanitizers and
+runs its tests. If it prints `all tests passed`, everything from here on that goes
+wrong is your code, not your setup. Then open the three files in
+[template/](template/) — `clamp.h`, `clamp.c`, `test_clamp.c`. They are heavily
+commented on *structure*, and the clamping itself is three lines so nothing
+distracts from the layout. That's the shape every kata takes.
+
+### Day one, tomorrow morning
+
 **Do not start in this repo.** The drill is writing from a blank file; the repo only
 receives a version once it's genuinely good. Work in a scratch directory:
 
@@ -209,7 +226,12 @@ receives a version once it's genuinely good. Work in a scratch directory:
 mkdir -p ~/scratch && cd ~/scratch
 ```
 
-Read `ring_buffer/BRIEF.md` from this repo, then close it and open an empty file.
+Read `ring_buffer/BRIEF.md` for what the thing is and why, then
+`ring_buffer/SKELETON.md` for what goes in which file and the order to write it in.
+Then **close both** and open an empty file.
+
+The first morning you will want to keep the skeleton open. That's fine — week one is
+allowed training wheels. By week three, opening it means you didn't need the session.
 Write the struct, the functions, and a `main()` with four or five assertions that
 try to break it. All in one file is fine while drilling — the three-file split is a
 repo concern, not a drill concern.

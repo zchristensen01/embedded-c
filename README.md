@@ -12,6 +12,9 @@ make test
 
 That is the bar: clone it, run that, watch everything pass.
 
+**Starting out?** [GETTING_STARTED.md](GETTING_STARTED.md) → [template/](template/)
+for the three-file shape in working C → your first kata's `SKELETON.md`.
+
 ## Modules
 
 | Module | What it is | Brief |
@@ -23,8 +26,11 @@ That is the bar: clone it, run that, watch everything pass.
 | `fixed_point_pid/` | Q16.16 PID with anti-windup and output saturation, no floating point | [brief](fixed_point_pid/BRIEF.md) |
 | `protocol_parser/` | Byte-at-a-time framed-message parser that recovers from garbage | [brief](protocol_parser/BRIEF.md) |
 
-Each directory carries a `NOTES.md`: what it does, one design decision and why,
-and one thing that bit me.
+Each directory carries a `NOTES.md` (what it does, one design decision and why,
+one thing that bit me) and a `SKELETON.md` (the three files in pseudocode).
+
+[template/](template/) is not a kata — it's a trivial working module that proves
+the toolchain and demonstrates the file layout.
 
 ## Documentation
 
@@ -34,6 +40,7 @@ and one thing that bit me.
 | [VERIFYING.md](VERIFYING.md) | How to know a kata is correct — reading sanitizer output, what each warning means, and the checklist before a version earns a commit |
 | [LOGGING.md](LOGGING.md) | The practice log format, the variant vocabulary, and the contract the website generates from |
 | `<module>/BRIEF.md` | What that kata is, why firmware needs it, the API, how to think about it, and what to test |
+| `<module>/SKELETON.md` | The three files for that kata as pseudocode — what goes where, and the order to write them in |
 | [KATA_IDEAS.md](KATA_IDEAS.md) | Candidates for a seventh kata, and why not to start one yet |
 
 ## Build targets
