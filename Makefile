@@ -26,7 +26,10 @@ help:
 	@echo "make list                     show which modules exist"
 	@echo "make clean                    remove build/"
 	@echo ""
-	@echo "See VERIFYING.md for how to read the output."
+	@echo "make log                      time curve per module, and who's at the 15-min bar"
+	@echo "make check-log                validate log.tsv (CI runs this)"
+	@echo ""
+	@echo "See VERIFYING.md for how to read the output, LOGGING.md for the log."
 
 test: | $(BUILD)
 	@if [ -z "$(MODULES)" ]; then echo "no modules yet — see GETTING_STARTED.md"; fi
@@ -66,11 +69,18 @@ valgrind: | $(BUILD)
 list:
 	@echo "modules: $(if $(ALL_MODULES),$(ALL_MODULES),none yet)"
 
+# The practice log. See LOGGING.md.
+log:
+	@python3 tools/check_log.py --summary
+
+check-log:
+	@python3 tools/check_log.py
+
 $(BUILD):
 	@mkdir -p $(BUILD)
 
 clean:
 	@rm -rf $(BUILD)
 
-.PHONY: help test debug analyze valgrind list clean
+.PHONY: help test debug analyze valgrind list log check-log clean
 .DEFAULT_GOAL := test

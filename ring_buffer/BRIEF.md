@@ -218,6 +218,10 @@ is where "the real cost of division" stops being an abstraction.
 
 ---
 
+> **Log slugs:** `naive` → `lockfree` → `bitmask`. Record each session in
+> [log.tsv](../log.tsv) under the variant you actually wrote — time is only
+> comparable within a variant. See [LOGGING.md](../LOGGING.md).
+
 ## The publishable angle
 
 Not the implementation — every bootcamp graduate has a ring buffer repo. What's worth

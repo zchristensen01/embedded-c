@@ -250,6 +250,10 @@ factors, and changing your loop rate stops silently retuning your controller.
 
 ---
 
+> **Log slugs:** `basic` → `dmeas` → `filtered`. Record each session in
+> [log.tsv](../log.tsv) under the variant you actually wrote — time is only
+> comparable within a variant. See [LOGGING.md](../LOGGING.md).
+
 ## The publishable angle
 
 **Strong, and it ties straight into your arm.** Float versus fixed-point on your

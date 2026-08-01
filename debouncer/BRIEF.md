@@ -190,6 +190,10 @@ thing to arrive at.
 
 ---
 
+> **Log slugs:** `counter` → `integrator` → `shiftreg`. Record each session in
+> [log.tsv](../log.tsv) under the variant you actually wrote — time is only
+> comparable within a variant. See [LOGGING.md](../LOGGING.md).
+
 ## The publishable angle
 
 **This is the best first writeup you can produce.** Put a real switch on a logic

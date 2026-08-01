@@ -206,6 +206,10 @@ that recovers by itself and one that needs a reboot.
 
 ---
 
+> **Log slugs:** `basic` → `stuffed` → `timeout`. Record each session in
+> [log.tsv](../log.tsv) under the variant you actually wrote — time is only
+> comparable within a variant. See [LOGGING.md](../LOGGING.md).
+
 ## The publishable angle
 
 **Fuzzing, and it's a genuinely uncommon thing to find in a junior portfolio.**

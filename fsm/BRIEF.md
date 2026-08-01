@@ -236,6 +236,10 @@ forever.
 
 ---
 
+> **Log slugs:** `switch` → `table` → `actions`. Record each session in
+> [log.tsv](../log.tsv) under the variant you actually wrote — time is only
+> comparable within a variant. See [LOGGING.md](../LOGGING.md).
+
 ## The publishable angle
 
 Switch version versus table version, compared on **flash size taken from the linker

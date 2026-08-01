@@ -1,0 +1,3 @@
+# The log validator rejects carriage returns, and a Makefile with CRLF line
+# endings fails in confusing ways. Keep everything LF regardless of platform.
+* text=auto eol=lf

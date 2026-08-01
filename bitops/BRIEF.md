@@ -214,6 +214,10 @@ lesson about when to be clever.
 
 ---
 
+> **Log slugs:** `plain` → `peripheral` → `branchless`. Record each session in
+> [log.tsv](../log.tsv) under the variant you actually wrote — time is only
+> comparable within a variant. See [LOGGING.md](../LOGGING.md).
+
 ## The publishable angle
 
 **The highest depth-per-word writeup available to you: "what `volatile` actually

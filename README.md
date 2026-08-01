@@ -32,6 +32,7 @@ and one thing that bit me.
 | --- | --- |
 | [GETTING_STARTED.md](GETTING_STARTED.md) | Which headers and types C actually gives you, how a module is laid out, how to write tests with no test framework, and a first session end to end |
 | [VERIFYING.md](VERIFYING.md) | How to know a kata is correct — reading sanitizer output, what each warning means, and the checklist before a version earns a commit |
+| [LOGGING.md](LOGGING.md) | The practice log format, the variant vocabulary, and the contract the website generates from |
 | `<module>/BRIEF.md` | What that kata is, why firmware needs it, the API, how to think about it, and what to test |
 | [KATA_IDEAS.md](KATA_IDEAS.md) | Candidates for a seventh kata, and why not to start one yet |
 
@@ -45,6 +46,9 @@ make analyze                  # gcc -fanalyzer: finds bugs without running the c
 make valgrind MODULE=fsm      # second opinion on memory behaviour
 make test CC=clang            # second compiler, different warnings
 make list                     # which modules exist
+
+make log                      # time curve per module, and who's at the 15-minute bar
+make check-log                # validate log.tsv
 ```
 
 ## Build flags
@@ -69,3 +73,10 @@ deleting the result. This repo holds only the best version of each so far. A
 module is replaced when a rewrite comes out genuinely better — interrupt-safe,
 table-driven, branchless — not on a schedule. The history is meant to read as
 iteration, not as a commit streak.
+
+Because most mornings end in a deleted file rather than a commit,
+[log.tsv](log.tsv) is the only record a session leaves: date, module, variant,
+minutes, and whether the sanitizers stayed silent on the first run. It tracks the
+guide's own definition of done — fifteen minutes from a blank file, sanitizers
+silent — rather than an invented metric, and the time curve per variant is the
+thing worth showing a stranger. See [LOGGING.md](LOGGING.md).
